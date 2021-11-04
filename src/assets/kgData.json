@@ -1,0 +1,78 @@
+{
+  "nodes": [
+    {
+      "id": "sectionPollution",
+      "label": "断面\n污染事件",
+      "size": 100,
+      "x": -500,
+      "y": 0
+    },
+    {
+      "id": "computeUnit",
+      "label": "计算单元",
+      "size": 100,
+      "x": -200,
+      "y": 0
+    },
+    {
+      "id": "rainStation",
+      "label": "降雨溢流",
+      "size": 90,
+      "x": 100,
+      "y": -200
+    },
+    {
+      "id": "osmanthusMansion",
+      "label": "面源污染",
+      "size": 70,
+      "x": 100,
+      "y": -50
+    },
+    {
+      "id": "sewageCulvert",
+      "label": "总口截污",
+      "size": 70,
+      "x": 100,
+      "y": 50
+    },
+    {
+      "id": "purificationPlant",
+      "label": "水质净化厂\n超负荷",
+      "size": 90,
+      "x": 100,
+      "y": 200
+    }
+  ],
+  "edges": [
+    {
+      "source": "sectionPollution",
+      "target": "computeUnit",
+      "size": 10,
+      "label": "源头"
+    },
+    {
+      "source": "computeUnit",
+      "target": "rainStation",
+      "size": 10,
+      "label": "产污"
+    },
+    {
+      "source": "computeUnit",
+      "target": "osmanthusMansion",
+      "size": 10,
+      "label": "产污"
+    },
+    {
+      "source": "computeUnit",
+      "target": "sewageCulvert",
+      "size": 10,
+      "label": "截污"
+    },
+    {
+      "source": "computeUnit",
+      "target": "purificationPlant",
+      "size": 10,
+      "label": "治污"
+    }
+  ]
+}
